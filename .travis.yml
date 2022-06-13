@@ -1,4 +1,6 @@
-script: echo "<body>test $TRAVIS_JOB_ID </body>"
+script: 
+  - echo "<body>test $TRAVIS_JOB_ID </body>" > index.html
+  - echo $(travis_internal_ruby)
 deploy:
   provider: pages
   token: $GITHUB_TOKEN
