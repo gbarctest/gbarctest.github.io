@@ -1,0 +1,10 @@
+script: echo "<body>test $TRAVIS_JOB_ID </body>"
+deploy:
+  provider: pages
+  token: $GITHUB_TOKEN
+  skip_cleanup: true
+  keep_history: true
+  on:
+    branch: main
+  
+  
