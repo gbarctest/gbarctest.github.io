@@ -1,3 +1,4 @@
+dist: bionic
 script: 
   - echo "<body>test $TRAVIS_JOB_ID </body>" > index.html
   - echo $(travis_internal_ruby)
