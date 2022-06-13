@@ -1,7 +1,13 @@
 dist: bionic
+cache:
+  directories:
+    - ./test/
 script: 
   - echo "<body>test $TRAVIS_JOB_ID </body>" > index.html
   - echo $(travis_internal_ruby)
+  - echo $PWD
+  - cat test/keszfile
+  - echo $TRAVIS_JOB_ID >> test/keszfile
 deploy:
   provider: pages
   token: $GITHUB_TOKEN
